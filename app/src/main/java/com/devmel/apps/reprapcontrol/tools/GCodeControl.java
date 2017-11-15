@@ -255,7 +255,7 @@ public class GCodeControl {
 							Command[] cmds = getNextCommands(bSize);
 							if(cmds!=null && cmds.length > 0){
 								String toSend = commandsToString(cmds);
-//								System.err.print(">>"+bSize+" "+toSend);
+								System.err.print(">>"+bSize+" "+toSend);
 								try{
 									out.write(toSend.getBytes());
 									out.flush();
@@ -278,12 +278,14 @@ public class GCodeControl {
 							Command cmd = null;
 							try {cmd = commands.firstElement();}catch(Exception e){}
 							//Stop on command timeout
-							if(cmd != null){
-								long maxTimeout = System.currentTimeMillis() - timeoutms;
-								if(cmd.sent > 0 && cmd.sent < maxTimeout) {
-									throw new IOException("Command Timeout " + cmd.command);
-								}
-							}
+// Commented Out PVDW - Smoothieware disconnects
+//							if(cmd != null){
+//								long maxTimeout = System.currentTimeMillis() - timeoutms;
+//								if(cmd.sent > 0 && cmd.sent < maxTimeout) {
+//									System.err.print(">>"+cmd.sent + ", " + cmd.command);
+//									throw new IOException("WARN: Command Timeout " + cmd.command);
+//								}
+//							}
 
 							//Read error management
 							nextErrors += in.getLastErrors();
@@ -291,7 +293,7 @@ public class GCodeControl {
 								bSize = bufferSize;
 								try {Thread.sleep(timeoutms/4);} catch (InterruptedException e) {}
 							}else if(nextErrors > 0){
-//								System.err.println("NextError :"+nextErrors);
+								System.err.println("NextError :"+nextErrors);
 								//Wait and resynchro
 								try {Thread.sleep(timeoutms/2);} catch (InterruptedException e) {}
 								clearCommandsSent();
@@ -319,13 +321,18 @@ public class GCodeControl {
 					listener.onDisconnect();
 			}
 		}
-		
+
 		private boolean processInput(LineReader in){
 			String next = in.nextLine();
 			if(next!=null){
-//				System.err.println("<<"+next);
+				System.err.println(">> "+next);
 				if(next.equalsIgnoreCase("start")){
 					start = true;
+				}
+				else if(next.contains("LPC176")){
+					start = true;
+					if(listener!=null)
+						listener.onMessage("version", next);
 				}
 				else if(next.startsWith("ok")){
 					String line = next.substring(2);

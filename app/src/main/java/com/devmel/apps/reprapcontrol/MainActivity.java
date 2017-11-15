@@ -179,6 +179,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (Exception e) {
                 }
                 gcodeControl.resetBuffer();
+                gcodeControl.command("version\n");
                 sharedData.connect = gcodeControl.connect(device, false);
                 //Refresh tab layout
                 TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
@@ -320,7 +321,7 @@ public class MainActivity extends AppCompatActivity {
                 long curTime = System.currentTimeMillis();
                 if(sharedData.firmware == null && gcodeControl.isBusy() == false){
                     if(lastCommand + 3000 < curTime){
-                        gcodeControl.command("M115");
+                        gcodeControl.command("version");
                         lastCommand = curTime;
                     }
                     if(start + 12000 < curTime){
@@ -471,9 +472,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             if(!isdecoded && command!=null){
-                if(command.equals("M115")) {
+                if(command.equals("version")) {
                     if (sharedData.firmware == null) {
-                        sharedData.firmware = msg;
+                        sharedData.firmware = "Smoothieware";
                         gcodeControl.command("M20");
                         isdecoded = true;
                     }

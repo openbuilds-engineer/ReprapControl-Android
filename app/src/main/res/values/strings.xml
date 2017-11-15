@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Reprap Control</string>
+    <string name="app_name">APEX Interface</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_port_select">Port Selection</string>
     <string name="title_activity_linkbus_add">Add a LinkBus Connection</string>
@@ -9,7 +9,7 @@
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
     <string name="apply">Apply</string>
-    <string name="profil_name">Profil Name</string>
+    <string name="profil_name">Profile Name</string>
     <string name="addLB">Add a LinkBus</string>
     <string name="selectLB">Select a LinkBus</string>
     <string name="errorUnknown">An unknown error occurred...</string>

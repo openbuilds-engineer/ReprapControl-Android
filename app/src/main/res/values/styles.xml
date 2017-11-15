@@ -17,4 +17,13 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="OBToolbarTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:actionBarSize">32dp</item>
+        <item name="actionBarSize">32dp</item>
+        <item name="android:textColorPrimary">#ffffff</item>
+        <item name="actionMenuTextColor">#ffffff</item>
+        <item name="android:textColorSecondary">#cccccc</item>
+        <item name="android:textSize">4sp</item>
+    </style>
+
 </resources>

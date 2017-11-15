@@ -53,7 +53,7 @@ public class SdcardFragment extends Fragment {
 		btSDInit.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
 				if(mActivity != null){
-					if(!mActivity.gcodeControl.command("M22\nM21\nM20"))
+					if(!mActivity.gcodeControl.command("M20"))
 						mActivity.machineBusyMsg();
 				}
 			}
@@ -62,6 +62,7 @@ public class SdcardFragment extends Fragment {
 			public void onClick(View v) {
 				if(mActivity != null){
 					if(!mActivity.gcodeControl.command("M25"))
+
 						mActivity.machineBusyMsg();
 				}
 			}
