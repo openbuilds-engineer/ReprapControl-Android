@@ -15,7 +15,7 @@ import com.devmel.devices.SimpleIPError;
 
 public class GCodeControl {
 	private final Vector<Command> commands = new Vector<Command>();
-	public int timeoutms = 15000;
+	public int timeoutms = 1500;
 	private GCodeControl.Listener listener;
 	private int bufferSize = 64;
 	private Manager manager = null;
@@ -239,6 +239,7 @@ public class GCodeControl {
 					in = new LineReader(device.getInputStream());
 					in.reset();
 					//Wait for start
+					command("version\n");
 					long startTime = System.currentTimeMillis();
 					while(start == false && (startTime+timeoutms)>System.currentTimeMillis()){
 						processInput(in);
@@ -274,16 +275,16 @@ public class GCodeControl {
 									try {commands.wait(555);} catch (InterruptedException e) {}
 								}
 							}
-							//Command timeout
-							Command cmd = null;
-							try {cmd = commands.firstElement();}catch(Exception e){}
-							//Stop on command timeout
-// Commented Out PVDW - Smoothieware disconnects
+//							//Command timeout
+//							Command cmd = null;
+//							try {cmd = commands.firstElement();}catch(Exception e){}
+//							//Stop on command timeout
 //							if(cmd != null){
+//								System.err.println("CMD :"+cmd.sent);
 //								long maxTimeout = System.currentTimeMillis() - timeoutms;
 //								if(cmd.sent > 0 && cmd.sent < maxTimeout) {
-//									System.err.print(">>"+cmd.sent + ", " + cmd.command);
-//									throw new IOException("WARN: Command Timeout " + cmd.command);
+//									System.err.println("Command Timeout " +cmd.command);
+//									throw new IOException("Command Timeout " + cmd.command);
 //								}
 //							}
 
@@ -325,14 +326,21 @@ public class GCodeControl {
 		private boolean processInput(LineReader in){
 			String next = in.nextLine();
 			if(next!=null){
-				System.err.println(">> "+next);
+				System.err.println("processInput >> "+next);
 				if(next.equalsIgnoreCase("start")){
 					start = true;
 				}
 				else if(next.contains("LPC176")){
 					start = true;
+					Command cmd = null;
+					String command = "";
+					if(cmd != null)
+						command = cmd.command;
 					if(listener!=null)
-						listener.onMessage("version", next);
+						listener.onMessage(command, next);
+				}
+				else if(next.contains("axis")){
+					start = true;
 				}
 				else if(next.startsWith("ok")){
 					String line = next.substring(2);
@@ -352,6 +360,7 @@ public class GCodeControl {
 				}
 				else if(next.startsWith("rs") || next.startsWith("Resend:")){
 					String line = next.substring(2);
+					System.err.println("processInput > RS >> " +line);
 					if(next.startsWith("Resend:")){
 						line = next.substring(7);
 					}
@@ -363,6 +372,7 @@ public class GCodeControl {
 				}
 				else if(next.startsWith("!!") || next.startsWith("Error:")){
 					String line = next.substring(2);
+					System.err.println("processInput > ERROR >> " +line);
 					if(next.startsWith("Error:")){
 						line = next.substring(6);
 					}
@@ -372,6 +382,7 @@ public class GCodeControl {
 				else if(next.equalsIgnoreCase("Done saving file.")){
                     Command cmd = null;
 					try {cmd = commands.remove(0);}catch(Exception e){}
+					System.err.println("processInput > SD DONE >> ");
                     String command = "";
                     if(cmd != null)
                         command = cmd.command;
@@ -383,6 +394,7 @@ public class GCodeControl {
 						listener.onEcho(next.substring(5));
 				}
 				else{
+					System.err.println("processInput > ELSE >> " +next);
                     Command cmd = null;
 					try {cmd = commands.firstElement();}catch(Exception e){}
                     String command = "";
