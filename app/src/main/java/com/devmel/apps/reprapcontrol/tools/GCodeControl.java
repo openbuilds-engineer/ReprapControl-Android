@@ -256,7 +256,7 @@ public class GCodeControl {
 							Command[] cmds = getNextCommands(bSize);
 							if(cmds!=null && cmds.length > 0){
 								String toSend = commandsToString(cmds);
-								System.err.print(">>"+bSize+" "+toSend);
+//								System.err.print(">>"+bSize+" "+toSend);
 								try{
 									out.write(toSend.getBytes());
 									out.flush();
@@ -326,7 +326,7 @@ public class GCodeControl {
 		private boolean processInput(LineReader in){
 			String next = in.nextLine();
 			if(next!=null){
-				System.err.println("processInput >> "+next);
+//				System.err.println("processInput >> "+next);
 				if(next.equalsIgnoreCase("start")){
 					start = true;
 				}
@@ -360,7 +360,7 @@ public class GCodeControl {
 				}
 				else if(next.startsWith("rs") || next.startsWith("Resend:")){
 					String line = next.substring(2);
-					System.err.println("processInput > RS >> " +line);
+//					System.err.println("processInput > RS >> " +line);
 					if(next.startsWith("Resend:")){
 						line = next.substring(7);
 					}
@@ -372,7 +372,7 @@ public class GCodeControl {
 				}
 				else if(next.startsWith("!!") || next.startsWith("Error:")){
 					String line = next.substring(2);
-					System.err.println("processInput > ERROR >> " +line);
+//					System.err.println("processInput > ERROR >> " +line);
 					if(next.startsWith("Error:")){
 						line = next.substring(6);
 					}
@@ -382,7 +382,7 @@ public class GCodeControl {
 				else if(next.equalsIgnoreCase("Done saving file.")){
                     Command cmd = null;
 					try {cmd = commands.remove(0);}catch(Exception e){}
-					System.err.println("processInput > SD DONE >> ");
+//					System.err.println("processInput > SD DONE >> ");
                     String command = "";
                     if(cmd != null)
                         command = cmd.command;
@@ -394,7 +394,7 @@ public class GCodeControl {
 						listener.onEcho(next.substring(5));
 				}
 				else{
-					System.err.println("processInput > ELSE >> " +next);
+//					System.err.println("processInput > ELSE >> " +next);
                     Command cmd = null;
 					try {cmd = commands.firstElement();}catch(Exception e){}
                     String command = "";

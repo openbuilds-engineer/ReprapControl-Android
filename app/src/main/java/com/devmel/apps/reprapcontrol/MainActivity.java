@@ -314,14 +314,14 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void run(){
             String Method = Thread.currentThread().getStackTrace()[2].getMethodName();
-            System.err.println("MainAct RUN " + Method);
+//            System.err.println("MainAct RUN " + Method);
             int counter = 0;
             long lastCommand = 0;
             while(run == true){
                 //Try firmware first
                 long curTime = System.currentTimeMillis();
                 if(sharedData.firmware == null && gcodeControl.isBusy() == false){
-                    System.err.println("Still NULL Firmware ");
+//                    System.err.println("Still NULL Firmware ");
                     if(lastCommand + 3000 < curTime){
 //                        System.err.println("Asking for Smoothie Firmware ");
 //                        gcodeControl.command("version");
@@ -416,7 +416,7 @@ public class MainActivity extends AppCompatActivity {
         }
         @Override
         public void onMessage(final String command, final String msg) {
-            System.err.println("onMessage >> cmd:"+command+" | mesg:"+msg);
+//            System.err.println("onMessage >> cmd:"+command+" | mesg:"+msg);
             boolean isdecoded = false;
             //Decode position
             try {
@@ -424,7 +424,7 @@ public class MainActivity extends AppCompatActivity {
                 Matcher matcher = pattern.matcher(msg);
                 if (matcher.matches()) {
                     sharedData.setPosition(Double.parseDouble(matcher.group(1)), Double.parseDouble(matcher.group(3)), Double.parseDouble(matcher.group(5)), Double.parseDouble(matcher.group(7)));
-                    System.err.println("Updated POS");
+//                    System.err.println("Updated POS");
                     isdecoded = true;
                 }
             }catch(Exception e){
@@ -439,7 +439,7 @@ public class MainActivity extends AppCompatActivity {
                     if (matcher.matches() && matcher1.matches()) {
                         sharedData.setTemperatureExtruder(Double.parseDouble(matcher.group(2).trim()), Double.parseDouble(matcher.group(3).trim()));
                         sharedData.setTemperatureBed(Double.parseDouble(matcher1.group(2).trim()), Double.parseDouble(matcher1.group(3).trim()));
-                        System.err.println("Updated Temps");
+//                        System.err.println("Updated Temps");
                         isdecoded = true;
                     }
                 }catch(Exception e){
@@ -483,7 +483,7 @@ public class MainActivity extends AppCompatActivity {
             }
             if(!isdecoded && command!=null){
                 if(msg.contains("LPC176")) {
-                    System.err.println("onMessage >> FOUND SMOOTHIEWARE!: " + msg);
+//                    System.err.println("onMessage >> FOUND SMOOTHIEWARE!: " + msg);
                     if (sharedData.firmware == null) {
                         sharedData.firmware = "Smoothieware";
                         isdecoded = true;
