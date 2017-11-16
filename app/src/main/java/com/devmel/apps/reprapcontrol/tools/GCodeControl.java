@@ -245,6 +245,7 @@ public class GCodeControl {
 						processInput(in);
 					}
 					in.reset();
+					resetBuffer();
 					if(start == true){
 						if(listener!=null)
 							listener.onConnect();

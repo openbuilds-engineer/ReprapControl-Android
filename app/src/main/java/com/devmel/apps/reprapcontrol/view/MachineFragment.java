@@ -17,6 +17,7 @@ import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -25,15 +26,20 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import com.beardedhen.androidbootstrap.BootstrapButton;
+import com.beardedhen.androidbootstrap.BootstrapEditText;
+import com.beardedhen.androidbootstrap.api.defaults.DefaultBootstrapBrand;
+
+
 public class MachineFragment extends Fragment {
 	MainActivity mActivity = null;	//Controller
 	SharedData sharedData = new SharedData();
 
-	private Button connectBt;
-	private Button selectPortBt;
-	private EditText baudRateValue;
+	private BootstrapButton connectBt;
+	private BootstrapButton selectPortBt;
+	private BootstrapEditText baudRateValue;
 	private TextView infosText;
-	private Button swresetBt;
+	private BootstrapButton swresetBt;
 	private LinearLayout lbLayout;
 	private CompoundButton vtgSwitch;
 	private CompoundButton resetSwitch;
@@ -51,11 +57,11 @@ public class MachineFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_machine, container, false);
-		connectBt = (Button) rootView.findViewById(R.id.connectBt);
-		selectPortBt = (Button) rootView.findViewById(R.id.selectPortBt);
-		baudRateValue = (EditText) rootView.findViewById(R.id.baudRateValue);
+		connectBt = (BootstrapButton) rootView.findViewById(R.id.connectBt);
+		selectPortBt = (BootstrapButton) rootView.findViewById(R.id.selectPortBt);
+		baudRateValue = (BootstrapEditText) rootView.findViewById(R.id.baudRateValue);
 		infosText = (TextView) rootView.findViewById(R.id.infosText);
-		swresetBt = (Button) rootView.findViewById(R.id.swresetBt);
+		swresetBt = (BootstrapButton) rootView.findViewById(R.id.swresetBt);
 
 		baudRateValue.addTextChangedListener(new TextWatcher() {
 			@Override
@@ -132,12 +138,15 @@ public class MachineFragment extends Fragment {
 		if(state == 2){
 			connectBt.setEnabled(false);
 			connectBt.setText(getString(R.string.connecting));
+			connectBt.setBootstrapBrand(DefaultBootstrapBrand.WARNING);
 		}else if(state == 1){
 			connectBt.setEnabled(true);
 			connectBt.setText(getString(R.string.disconnect));
+			connectBt.setBootstrapBrand(DefaultBootstrapBrand.DANGER);
 		}else{
 			connectBt.setEnabled(true);
 			connectBt.setText(getString(R.string.connect));
+			connectBt.setBootstrapBrand(DefaultBootstrapBrand.SUCCESS);
 		}
 	}
 

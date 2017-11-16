@@ -36,8 +36,10 @@ public class PortSelect extends Activity {
 	ListView bluetoothDevices;
 	Button bluetoothEnable;
 	UserPrefs userPrefs;
-	
- 
+	TextView usbMessage;
+	TextView btMessage;
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -47,6 +49,8 @@ public class PortSelect extends Activity {
 		usbEnable = (Button) findViewById(R.id.usbEnable);
 		bluetoothDevices = (ListView) findViewById(R.id.bluetoothDevices);
 		bluetoothEnable = (Button) findViewById(R.id.bluetoothEnable);
+		usbMessage = (TextView) findViewById(R.id.usbMessage);
+		btMessage = (TextView) findViewById(R.id.btMessage);
 
 		usbEnable.setOnClickListener(new OnClickListener(){
 			@Override
@@ -86,7 +90,8 @@ public class PortSelect extends Activity {
 	            String itemName = (String) parent.getItemAtPosition(position);
 	            save("USB", itemName);
 	            colorSelected();
-		    }
+				finish();
+			}
 		});
 		
 		bluetoothDevices.setOnItemClickListener(new OnItemClickListener() {
@@ -95,7 +100,8 @@ public class PortSelect extends Activity {
 	            String itemName = (String) parent.getItemAtPosition(position);
 	            save("BT", itemName);
 	            colorSelected();
-		    }
+				finish();
+			}
 		});
 
 		
@@ -175,14 +181,19 @@ public class PortSelect extends Activity {
 				Class.forName("android.hardware.usb.UsbManager");
 				isUSB = true;
 			} catch( ClassNotFoundException e ) {
+				usbMessage.setText("No USB Driver Support");
 			}
 			if(isUSB) {
+				usbMessage.setVisibility(View.VISIBLE);
+				btMessage.setVisibility(View.INVISIBLE);
 				String[] listDevices = UartUsbOTG.list(getBaseContext());
 				if (listDevices != null) {
 					DeviceListAdapter list = new DeviceListAdapter(this, android.R.layout.simple_list_item_1, listDevices);
 					usbDevices.setAdapter(list);
+					usbMessage.setText("Select a USB device above.");
 				} else {
 					usbDevices.setAdapter(null);
+					usbMessage.setText("No USB Devices detected");
 				}
 				justifyListViewHeightBasedOnChildren(usbDevices);
 				if (USBOTGSystem.isEnabled() == false) {
@@ -190,10 +201,14 @@ public class PortSelect extends Activity {
 				}
 			}else{
 				usbEnable.setText(R.string.usb_not_found);
+
 				usbEnable.setEnabled(false);
 				usbEnable.setVisibility(View.VISIBLE);
 			}
     	}else if(type.equals("BT")){
+			usbMessage.setVisibility(View.INVISIBLE);
+			btMessage.setVisibility(View.VISIBLE);
+			btMessage.setText("Select an already paired Bluetooth device above. \n To add a new device, first pair the connection from Settings, Bluetooth on Android");
 			String[] listDevices = UartBluetooth.list();
 			if(listDevices!=null){
 				DeviceListAdapter list = new DeviceListAdapter(this, android.R.layout.simple_list_item_1, listDevices);

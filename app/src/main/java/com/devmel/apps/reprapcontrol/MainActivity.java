@@ -2,6 +2,7 @@ package com.devmel.apps.reprapcontrol;
 
 import android.content.Context;
 import android.content.Intent;
+import android.net.Uri;
 import android.support.design.widget.TabLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -11,15 +12,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
 
-import android.widget.TextView;
 import android.widget.Toast;
+
+import android.graphics.Typeface;
 
 import com.devmel.apps.reprapcontrol.datas.SharedData;
 import com.devmel.apps.reprapcontrol.tools.GCodeControl;
@@ -29,16 +27,15 @@ import com.devmel.apps.reprapcontrol.view.SdcardFragment;
 import com.devmel.communication.IUart;
 import com.devmel.communication.android.UartBluetooth;
 import com.devmel.communication.android.UartUsbOTG;
-import com.devmel.storage.Node;
-import com.devmel.storage.SimpleIPConfig;
 import com.devmel.storage.android.UserPrefs;
 
 import java.io.IOException;
 import java.util.Locale;
-import java.util.Timer;
-import java.util.TimerTask;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import com.beardedhen.androidbootstrap.TypefaceProvider;
+
 
 public class MainActivity extends AppCompatActivity {
     public final static String sharedPreferencesName = "com.devmel.apps.reprapcontrol";
@@ -71,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TypefaceProvider.registerDefaultIconSets();
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -127,6 +125,16 @@ public class MainActivity extends AppCompatActivity {
             portSelect();
             return true;
         }
+        if (id == R.id.openbuilds_com) {
+            Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://openbuilds.com"));
+            startActivity(intent);
+            return true;
+        }
+        if (id == R.id.openbuildspartstore_com) {
+            Intent intent = new Intent(Intent.ACTION_VIEW).setData(Uri.parse("https://openbuildspartstore.com"));
+            startActivity(intent);
+            return true;
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -143,7 +151,8 @@ public class MainActivity extends AppCompatActivity {
         gcodeControl.setListener(listener);
         if(!gcodeControl.isConnected()) {
             if(device == null){
-                portSelect();
+                //portSelect();
+                displayToast("Please select a Port first");
             }else {
                 sharedData.connect = true;
                 if (machine != null)
@@ -428,7 +437,7 @@ public class MainActivity extends AppCompatActivity {
                 if(msg.contains("LPC176")) {
 //                    System.err.println("onMessage >> FOUND SMOOTHIEWARE!: " + msg);
                     if (sharedData.firmware == null) {
-                        sharedData.firmware = "Smoothieware";
+                        sharedData.firmware = msg;
                         isdecoded = true;
                     }
                 }

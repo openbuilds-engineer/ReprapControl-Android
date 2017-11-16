@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
     
@@ -9,65 +11,88 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
+
     <TableLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:text="@string/baud_rate"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:layout_height="wrap_content">
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                app:bootstrapBrand="primary"
+                app:bootstrapText="{fa_tty} Baud"
+                android:layout_marginRight="12dp"
+                />
 
-            <EditText
+            <com.beardedhen.androidbootstrap.BootstrapEditText
                 android:id="@+id/baudRateValue"
+                android:inputType="number"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
                 android:ems="10"
-                android:inputType="number"
-                android:text="@string/default_baud_rate" />
+                android:layout_weight="2"
+                android:text="@string/default_baud_rate"
+                app:bootstrapBrand="success"
+                app:roundedCorners="true"
+                />
+
+
+
+
         </TableRow>
 
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">>
-            <TextView
+            android:layout_height="wrap_content">
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                app:bootstrapBrand="primary"
+                app:bootstrapText="{fa_usb} {fa-bluetooth} Port"
+                android:layout_marginRight="12dp"
+                />
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/selectPortBt"
                 android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:text="@string/select_port"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:id="@+id/selectPortBt" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Connect"
+                app:bootstrapBrand="primary"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:showOutline="false"
+                app:roundedCorners="true"
+                />
+
+
         </TableRow>
         <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:text="@string/connect_port"
-                android:textAppearance="?android:attr/textAppearanceSmall" />
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="fill_parent"
+            android:layout_height="wrap_content">
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                app:bootstrapBrand="primary"
+                app:bootstrapText="{fa_plug} Connect"
+                android:layout_marginRight="12dp"
+                />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
                 android:id="@+id/connectBt"
-                android:text="@string/connect" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="Connect"
+                app:bootstrapBrand="success"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:showOutline="false"
+                app:roundedCorners="true"
+                />
+
+
         </TableRow>
 
     </TableLayout>
-
-
 
     <TextView
         android:id="@+id/infosText"
@@ -75,21 +100,18 @@
         android:layout_height="wrap_content"
         android:text="" />
 
-    <EditText
-        android:id="@+id/consoleText"
-        android:layout_width="match_parent"
-        android:layout_height="110dp"
-        android:ems="10"
-        android:gravity="top"
-        android:text="@string/string_terminal"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:inputType="" />
-
-    <Button
+    <com.beardedhen.androidbootstrap.BootstrapButton
+        android:id="@+id/swresetBt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/swResetM999"
-        android:id="@+id/swresetBt"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="center_horizontal"
+        app:bootstrapBrand="danger"
+        app:bootstrapSize="lg"
+        app:buttonMode="regular"
+        app:showOutline="false"
+        app:roundedCorners="true"
+        />
 
 </LinearLayout>
 </ScrollView>
