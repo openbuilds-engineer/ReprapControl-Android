@@ -31,8 +31,6 @@ import android.widget.Toast;
 
 public class PortSelect extends Activity {
 	RadioGroup deviceSelect;
-	ListView linkbusDevices;
-	Button linkbusAdd;
 	ListView usbDevices;
 	Button usbEnable;
 	ListView bluetoothDevices;
@@ -45,19 +43,11 @@ public class PortSelect extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_port_select);
 		deviceSelect = (RadioGroup) findViewById(R.id.deviceSelect);
-		linkbusDevices = (ListView) findViewById(R.id.linkbusDevices);
-		linkbusAdd = (Button) findViewById(R.id.linkbusAdd);
 		usbDevices = (ListView) findViewById(R.id.usbDevices);
 		usbEnable = (Button) findViewById(R.id.usbEnable);
 		bluetoothDevices = (ListView) findViewById(R.id.bluetoothDevices);
 		bluetoothEnable = (Button) findViewById(R.id.bluetoothEnable);
-		
-		linkbusAdd.setOnClickListener(new OnClickListener(){
-			@Override
-			public void onClick(View arg0) {
-				addLinkbus();
-  			}
-		});
+
 		usbEnable.setOnClickListener(new OnClickListener(){
 			@Override
 			public void onClick(View arg0) {
@@ -89,18 +79,7 @@ public class PortSelect extends Activity {
 				}
   			}
 		});
-		
-		linkbusDevices.setOnItemClickListener(new OnItemClickListener() {
-		    @Override
-		    public void onItemClick(AdapterView<?> parent, View view, int position,long arg3) {
-	            String itemName = (String) parent.getItemAtPosition(position);
-	            save("LB", itemName);
-            	hideAllList();
-        	    listSelected("LB");
-	            colorSelected();
-		    }
-		});
-		
+
 		usbDevices.setOnItemClickListener(new OnItemClickListener() {
 		    @Override
 		    public void onItemClick(AdapterView<?> parent, View view, int position,long arg3) {
@@ -124,9 +103,6 @@ public class PortSelect extends Activity {
 			@Override
 			public void onCheckedChanged(RadioGroup selected, int checkedId) {
 				hideAllList();
-				if(checkedId == R.id.linkbusChecked){
-					listSelected("LB");
-				}
 				if(checkedId == R.id.usbChecked){
 					listSelected("USB");
 				}
@@ -146,11 +122,7 @@ public class PortSelect extends Activity {
 		//Initialize
 		String type = userPrefs.getString("selectedType");
 		if(type!=null){
-			if(type.equals("LB")){
-				RadioButton bt = (RadioButton) findViewById(R.id.linkbusChecked);
-				bt.setChecked(true);
-			}
-			else if(type.equals("USB")){
+			if(type.equals("USB")){
 				RadioButton bt = (RadioButton) findViewById(R.id.usbChecked);
 				bt.setChecked(true);
 			}
@@ -184,65 +156,8 @@ public class PortSelect extends Activity {
 			userPrefs = new UserPrefs(getSharedPreferences(MainActivity.sharedPreferencesName, Context.MODE_PRIVATE));
 		}
 	}
-	
-	private void addLinkbus(){
-        Intent intent = new Intent(this, LinkbusAdd.class);
-		startActivityForResult(intent, 0);
-	}
-	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		super.onActivityResult(requestCode, resultCode, data);
-		//Request = 0  //Add Linkbus
-		if (requestCode == 0) {
-			if (resultCode == RESULT_OK) {
-				String profilName = data.getStringExtra("profilName");
-				Node devices = new Node(this.userPrefs, "Linkbus");
-				String[] ipDeviceList = devices.getChildNames();
-				if(ipDeviceList!=null){
-					for(int i=0; i<ipDeviceList.length;i++){
-						SimpleIPConfig dev = SimpleIPConfig.createFromNode(devices, ipDeviceList[i]);
-						if(dev!=null && dev.getName().equals(profilName)){
-							save("LB", dev.getName()+" - "+dev.getIpAsText());
-							break;
-						}
-					}
-				}
-			}
-		}
-	}
 
-
-	public void removeDeviceClickHandler(View v) {
-		Object get = v.getTag();
-		if(get!=null){
-			String name = get.toString();
-			initPreferences();
-			Node devices = new Node(this.userPrefs, "Linkbus");
-			String[] ipDeviceList = devices.getChildNames();
-			if(ipDeviceList!=null){
-				String shortName = null;
-				for(int i=0; i<ipDeviceList.length;i++){
-					SimpleIPConfig dev = SimpleIPConfig.createFromNode(devices, ipDeviceList[i]);
-					if(dev!=null){
-						if(name.equals(dev.getName()+" - "+dev.getIpAsText())){
-							shortName = dev.getName();
-							break;
-						}
-					}
-				}
-				if(shortName!=null){
-					devices.removeChild(shortName);
-	            	hideAllList();
-	        	    listSelected("LB");
-	        	    colorSelected();
-				}
-			}
-		}
-	}
-	
 	private void hideAllList(){
-		linkbusDevices.setAdapter(null);
-		justifyListViewHeightBasedOnChildren(linkbusDevices);
-		linkbusAdd.setVisibility(View.GONE);
 		usbDevices.setAdapter(null);
 		justifyListViewHeightBasedOnChildren(usbDevices);
 		usbEnable.setVisibility(View.GONE);
@@ -253,25 +168,7 @@ public class PortSelect extends Activity {
 	
 	private void listSelected(String type){
 		initPreferences();
-    	if(type.equals("LB")){
-			Node devices = new Node(this.userPrefs, "Linkbus");
-			String[] ipDeviceList = devices.getChildNames();
-			if(ipDeviceList!=null){
-				for(int i=0; i<ipDeviceList.length;i++){
-					SimpleIPConfig dev = SimpleIPConfig.createFromNode(devices, ipDeviceList[i]);
-					if(dev!=null){
-						ipDeviceList[i] = dev.getName()+" - "+dev.getIpAsText();
-					}
-				}
-				DeviceListAdapter list = new DeviceListAdapter(this, android.R.layout.simple_list_item_1, ipDeviceList);
-				list.setDelete(true);
-				linkbusDevices.setAdapter(list);
-			}else{
-				linkbusDevices.setAdapter(null);
-			}
-			justifyListViewHeightBasedOnChildren(linkbusDevices);
-			linkbusAdd.setVisibility(View.VISIBLE);
-    	}else if(type.equals("USB")){
+    	if(type.equals("USB")){
 			//Test if usb exist
 			boolean isUSB = false;
 			try {
@@ -324,9 +221,7 @@ public class PortSelect extends Activity {
 		String name = userPrefs.getString("selectedName");
     	ListAdapter adapter = null;
     	try{
-	    	if(type.equals("LB")){
-		    	adapter = linkbusDevices.getAdapter();
-	    	}else if(type.equals("USB")){
+	    	if(type.equals("USB")){
 		    	adapter = usbDevices.getAdapter();
 	    	}else if(type.equals("BT")){
 		    	adapter = bluetoothDevices.getAdapter();

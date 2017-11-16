@@ -25,8 +25,6 @@ public class SharedData {
     private String sdFileSelected = null;
     private int[] sdStatus = new int[]{0,0};
 
-    public boolean[] linkbusStatus = new boolean[]{false, false, false};
-
     public void setSDFileSelected(String filename){
         sdFileSelected = filename;
     }

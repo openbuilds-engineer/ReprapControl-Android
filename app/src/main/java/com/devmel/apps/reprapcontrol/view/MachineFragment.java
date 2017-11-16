@@ -63,9 +63,6 @@ public class MachineFragment extends Fragment {
 		parityValue = (RadioGroup) rootView.findViewById(R.id.parityValue);
 		infosText = (TextView) rootView.findViewById(R.id.infosText);
 		swresetBt = (Button) rootView.findViewById(R.id.swresetBt);
-		lbLayout = (LinearLayout) rootView.findViewById(R.id.lbLayout);
-		vtgSwitch = (CompoundButton) rootView.findViewById(R.id.vtgSwitch);
-		resetSwitch = (CompoundButton) rootView.findViewById(R.id.resetSwitch);
 
 		baudRateValue.addTextChangedListener(new TextWatcher() {
 			@Override
@@ -129,20 +126,6 @@ public class MachineFragment extends Fragment {
 			}
 		});
 
-		vtgSwitch.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				if(mActivity != null)
-					mActivity.vtgToggle(vtgSwitch.isChecked());
-			}
-		});
-
-		resetSwitch.setOnClickListener(new View.OnClickListener() {
-			public void onClick(View v) {
-				if(mActivity != null)
-					mActivity.resetToggle(resetSwitch.isChecked());
-			}
-		});
-
 		return rootView;
 	}
 	
@@ -157,7 +140,6 @@ public class MachineFragment extends Fragment {
 
 	public void refresh(){
 		setInfos(sharedData.firmware);
-		setLinkBusStatus(sharedData.linkbusStatus[0],sharedData.linkbusStatus[1],sharedData.linkbusStatus[2]);
 		testConnectivity();
 	}
 
@@ -207,24 +189,6 @@ public class MachineFragment extends Fragment {
 			connectBt.setText(getString(R.string.connect));
 		}
 	}
-
-	private void setLinkBusStatus(boolean isLinkbus, boolean vtg, boolean reset){
-		if(lbLayout != null){
-			if(isLinkbus){
-				if(vtgSwitch != null){
-					vtgSwitch.setChecked(vtg);
-				}
-				if(resetSwitch != null){
-					resetSwitch.setChecked(reset);
-				}
-				lbLayout.setVisibility(View.VISIBLE);
-			}
-			else {
-				lbLayout.setVisibility(View.GONE);
-			}
-		}
-	}
-
 
 	private int getBaudRateView(){
 		int baudRate = sharedData.getBaudrate();

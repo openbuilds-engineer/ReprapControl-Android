@@ -6,33 +6,12 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" >
-            
+
         <RadioGroup
         android:id="@+id/deviceSelect"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" >
             
-            <RadioButton
-                android:id="@+id/linkbusChecked"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="10sp"
-                android:textSize="25sp"
-                android:text="LinkBus" />
-
-            <ListView
-                android:id="@+id/linkbusDevices"
-                android:layout_margin="10sp"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content" />
-                
-			<Button
-			    android:id="@+id/linkbusAdd"
-			    android:layout_width="fill_parent"
-			    android:layout_height="wrap_content"
-			    android:text="@string/add"
-				android:visibility="gone" />
-
             <RadioButton
                 android:id="@+id/usbChecked"
                 android:layout_width="match_parent"

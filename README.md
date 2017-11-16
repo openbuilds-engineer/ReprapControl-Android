@@ -13,11 +13,7 @@ Compatibility :
     * Arduino
     * CDC/ACM
 
- - LinkBus (Ethernet to UART device)
-    * see http://devmel.com/linkbus
-    
-
-Communication settings :
+ Communication settings :
  - Baud Rate: 1200 ~ 250000
  - Data Bits : 5, 6, 7 or 8
  - Stop Bits 1 or 2

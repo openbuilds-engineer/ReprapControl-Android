@@ -32,10 +32,6 @@
             android:name="com.devmel.apps.reprapcontrol.PortSelect"
             android:label="@string/title_activity_port_select" >
         </activity>
-        <activity
-            android:name="com.devmel.apps.reprapcontrol.LinkbusAdd"
-            android:label="@string/title_activity_linkbus_add" >
-        </activity>
     </application>
 
 </manifest>

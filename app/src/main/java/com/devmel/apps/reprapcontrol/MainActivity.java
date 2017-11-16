@@ -29,7 +29,6 @@ import com.devmel.apps.reprapcontrol.view.SdcardFragment;
 import com.devmel.communication.IUart;
 import com.devmel.communication.android.UartBluetooth;
 import com.devmel.communication.android.UartUsbOTG;
-import com.devmel.communication.linkbus.Usart;
 import com.devmel.storage.Node;
 import com.devmel.storage.SimpleIPConfig;
 import com.devmel.storage.android.UserPrefs;
@@ -136,31 +135,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void vtgToggle(boolean isChecked) {
-        IUart dev = gcodeControl.getDevice();
-        if (dev != null && dev instanceof Usart) {
-            try {
-                ((Usart) dev).setVTG(isChecked);
-                sharedData.linkbusStatus[0] = true;
-                sharedData.linkbusStatus[1] = isChecked;
-            } catch (IOException e) {
-                sharedData.linkbusStatus[0] = false;
-            }
-        }
-    }
-    public void resetToggle(boolean isChecked){
-        IUart dev = gcodeControl.getDevice();
-        if (dev != null && dev instanceof Usart) {
-            try {
-                ((Usart) dev).setReset(isChecked);
-                sharedData.linkbusStatus[0] = true;
-                sharedData.linkbusStatus[2] = isChecked;
-            } catch (IOException e) {
-                sharedData.linkbusStatus[0] = false;
-            }
-        }
-    }
-
     public void machineBusyMsg(){
         displayToast(getString(R.string.machineIsBusy));
     }
@@ -197,29 +171,7 @@ public class MainActivity extends AppCompatActivity {
             String type = userPrefs.getString("selectedType");
             String name = userPrefs.getString("selectedName");
             if (type != null && name != null) {
-                if (type.equals("LB")) {
-                    if (name.contains(" - ")) {
-                        String[] names = name.split(" - ");
-                        if (names != null && names.length > 0) {
-                            Node devices = new Node(this.userPrefs, "Linkbus");
-                            String[] ipDeviceList = devices.getChildNames();
-                            if (ipDeviceList != null) {
-                                for (String devStr : ipDeviceList) {
-                                    if (devStr.equals(names[0])) {
-                                        SimpleIPConfig ipDevice = SimpleIPConfig.createFromNode(devices, devStr);
-                                        Usart uart = new Usart(ipDevice);
-                                        //uart.setLock(userPrefs.getInt("lock")==1 ? true : false);
-                                        uart.setMode(Usart.MODE_ASYNCHRONOUS);
-                                        uart.setInterruptMode(true, 1000);
-                                        device = uart;
-                                        sharedData.setPortName(devStr);
-                                        break;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                } else if (type.equals("USB")) {
+                if (type.equals("USB")) {
                     String[] usbDeviceList = UartUsbOTG.list(getBaseContext());
                     for (String devStr : usbDeviceList) {
                         if (devStr.equals(name)) {
@@ -362,24 +314,12 @@ public class MainActivity extends AppCompatActivity {
         public void onConnect(){
             //Ask machine info
             gcodeControl.command(" ");
-            //Get linkbus info
-            IUart dev = gcodeControl.getDevice();
-            if(dev != null && dev instanceof Usart){
-                sharedData.linkbusStatus[0] = true;
-                try {
-                    sharedData.linkbusStatus[1] = ((Usart) dev).isVTGOn();
-                    sharedData.linkbusStatus[2] = ((Usart) dev).isResetOn();
-                } catch (IOException e) {
-                    sharedData.linkbusStatus[0] = false;
-                }
-            }
             refreshAll();
             timer = new LocalTimerLoop();
         }
 
         @Override
         public void onDisconnect() {
-            sharedData.linkbusStatus[0] = false;
             sharedData.connect = false;
             sharedData.firmware=null;
             if(timer!=null)
@@ -424,7 +364,10 @@ public class MainActivity extends AppCompatActivity {
                 Matcher matcher = pattern.matcher(msg);
                 if (matcher.matches()) {
                     sharedData.setPosition(Double.parseDouble(matcher.group(1)), Double.parseDouble(matcher.group(3)), Double.parseDouble(matcher.group(5)), Double.parseDouble(matcher.group(7)));
-//                    System.err.println("Updated POS");
+                    System.err.println("Updated POS: X: " + matcher.group(1));
+                    System.err.println("Updated POS: Y: " + matcher.group(3));
+                    System.err.println("Updated POS: Z: " + matcher.group(5));
+                    System.err.println("Updated POS: E: " + matcher.group(7));
                     isdecoded = true;
                 }
             }catch(Exception e){
