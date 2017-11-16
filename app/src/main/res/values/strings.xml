@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">APEX Interface</string>
-    <string name="action_settings">Connection</string>
+    <string name="action_settings">Connection Settings</string>
     <string name="title_activity_port_select">Port Selection</string>
-    <string name="title_section1">Machine</string>
-    <string name="title_section2">Axis</string>
+    <string name="title_section1">Connection</string>
+    <string name="title_section2">Jog</string>
     <string name="title_section3">SD Card</string>
     <string name="cancel">Cancel</string>
     <string name="ok">OK</string>
