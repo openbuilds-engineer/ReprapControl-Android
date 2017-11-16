@@ -34,14 +34,8 @@
     <string name="machineConfig">Machine Configuration</string>
     <string name="swResetM999">Software Reset (M999)</string>
     <string name="baud_rate" translatable="false">Baud Rate</string>
-    <string name="databits" translatable="false">Data Bits</string>
-    <string name="stopbits" translatable="false">Stop Bits</string>
-    <string name="parity" translatable="false">Parity</string>
-    <string name="none" translatable="false">none</string>
-    <string name="odd" translatable="false">odd</string>
-    <string name="even" translatable="false">even</string>
-    <string name="reset" translatable="false">Reset</string>
-    <string name="vtg" translatable="false">VTG</string>
+    <string name="select_port" translatable="false">Port</string>
+    <string name="connect_port" translatable="false">Connection</string>
     <string name="motors">Motors</string>
     <string name="steps">Steps</string>
     <string name="tempertures">Temperatures</string>
@@ -55,4 +49,6 @@
     <string name="startResume">Start / Resume</string>
     <string name="time">Time</string>
     <string name="rootFiles">Root Files</string>
+    <string name="default_baud_rate">115200</string>
+    <string name="string_terminal">Terminal</string>
 </resources>

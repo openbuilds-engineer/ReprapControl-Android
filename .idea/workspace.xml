@@ -13,19 +13,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d8fbc540-5b99-4ce0-ae05-540edb158ec4" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/LinkbusAdd.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout-v14/fragment_machine.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_linkbus_add.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/src/main/res/values-fr/strings.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/MainActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/PortSelect.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/PortSelect.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/datas/SharedData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/datas/SharedData.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/view/MachineFragment.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/view/MachineFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_port_select.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_port_select.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_machine.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_machine.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
@@ -96,37 +85,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="fragment_machine.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="fragment_machine.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_machine.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="37" column="32" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="37" selection-end-column="32" />
+            <state relative-caret-position="153">
+              <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
               <folding>
-                <element signature="e#978#997#0" expanded="true" />
+                <element signature="e#803#822#0" expanded="true" />
+                <element signature="e#1182#1209#0" expanded="true" />
+                <element signature="e#1599#1620#0" expanded="true" />
+                <element signature="e#2258#2280#0" expanded="true" />
+                <element signature="e#2556#2573#0" expanded="true" />
+                <element signature="e#2997#3022#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PortSelect.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/PortSelect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="223" column="12" lean-forward="false" selection-start-line="223" selection-start-column="12" selection-end-line="223" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_port_select.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_port_select.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="71">
-              <caret line="7" column="44" lean-forward="false" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-              <folding />
             </state>
           </provider>
           <provider editor-type-id="android-designer2">
@@ -137,13 +108,25 @@
       <file leaf-file-name="MachineFragment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/view/MachineFragment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+            <state relative-caret-position="188">
+              <caret line="55" column="75" lean-forward="false" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="75" />
               <folding>
-                <element signature="e#2716#2717#0" expanded="true" />
-                <element signature="e#2768#2769#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fragment_axis.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_axis.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="478">
+              <caret line="46" column="48" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="46" selection-end-column="48" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2">
+            <state />
           </provider>
         </entry>
       </file>
@@ -151,8 +134,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&gt;&gt;</find>
-      <find>System.err.println</find>
       <find>dataBits5</find>
       <find>lk</find>
       <find>lin</find>
@@ -175,12 +156,14 @@
       <find>b</find>
       <find>ba</find>
       <find>bau</find>
-      <find>baud</find>
       <find>l</find>
       <find>li</find>
       <find>linkb</find>
       <find>linkbu</find>
       <find>linkbus</find>
+      <find>baud</find>
+      <find>radiogro</find>
+      <find>radiog</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -1869,15 +1852,16 @@
         <option value="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/datas/SharedData.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-fr/strings.xml" />
         <option value="$PROJECT_DIR$/app/build/generated/source/r/debug/com/devmel/apps/reprapcontrol/R.java" />
-        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/LinkbusAdd.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/MainActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout-v14/fragment_machine.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/view/MachineFragment.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_port_select.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_machine.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/PortSelect.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/view/MachineFragment.java" />
+        <option value="$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-22.2.1.aar/1929ae68cd4798d0a6820fa224837ca6/jars/classes.jar!/android/support/v7/widget/AppCompatButton.class" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_machine.xml" />
       </list>
     </option>
   </component>
@@ -2045,6 +2029,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ReprapControl-Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ReprapControl-Android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="layout" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -2158,7 +2172,7 @@
       <option name="ACTIVITY_CLASS" value="com.devmel.apps.reprapcontrol.MainActivity" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1510814058823" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1510816975986" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -2231,7 +2245,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1510814058823" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1510816975987" />
       </method>
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
@@ -2279,7 +2293,7 @@
       </Profilers>
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1510814058823" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1510816975987" />
       </method>
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2462,7 +2476,7 @@
       <option name="ACTIVITY_CLASS" value="" />
       <method>
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1510814058824" />
+        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1510816975987" />
       </method>
     </configuration>
     <list size="2">
@@ -2612,10 +2626,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="0" width="1936" height="1056" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.58208954" order="14" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32900432" sideWeight="0.6076759" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="Logcat" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43614718" sideWeight="0.67963755" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2623,14 +2638,14 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Device File Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4914712" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.41791046" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.3923241" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49573562" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4936034" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4914712" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5426439" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2803838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -2681,16 +2696,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/menu/menu_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -2910,17 +2915,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_axis.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="23" lean-forward="false" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_sdcard.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="-566">
@@ -2990,403 +2984,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16">
           <caret line="2502" column="4" lean-forward="false" selection-start-line="2502" selection-start-column="4" selection-end-line="2502" selection-end-column="4" />
-          <folding>
-            <marker date="1510814052590" expanded="true" signature="120139:120144" ph="{...}" />
-            <marker date="1510814052590" expanded="true" signature="120179:144713" ph="{...}" />
-            <marker date="1510814052590" expanded="true" signature="144752:432758" ph="{...}" />
-            <marker date="1510814052590" expanded="true" signature="144758:149391" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="149832:150273" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="150354:151637" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="151712:152203" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="152260:152946" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="153008:153698" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="153762:154329" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="154391:154960" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="155023:155594" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="155658:156229" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="156293:156808" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="156877:157801" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="157862:158347" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="158401:158956" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="159013:159562" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="159616:159985" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="160052:160557" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="160622:161113" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="161171:161650" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="161702:162225" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="162299:162858" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="162917:163396" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="163448:164127" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="164189:164680" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="164738:165311" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="165377:165880" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="165944:166322" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="166378:166883" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="166948:167320" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="167373:167872" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="167934:168366" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="168450:168968" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="169096:170337" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="170482:170974" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="171032:171719" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="171782:172284" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="172347:172897" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="172951:173457" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="173522:174022" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="174084:174811" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="174908:175461" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="175554:175966" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="176043:177342" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="177488:177929" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="177992:178507" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="178577:179078" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="179141:179634" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="179693:180208" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="180278:180795" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="180866:181441" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="181531:182249" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="182352:183161" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="183242:183779" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="183867:184502" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="184570:185128" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="185187:185805" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="185900:186363" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="186440:187035" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="187101:187896" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="188009:188718" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="188810:189208" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="189314:191699" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="191914:192455" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="192544:193004" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="193077:193666" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="193746:194347" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="194433:195028" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="195111:195710" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="195795:196390" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="196473:197012" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="197100:197564" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="197639:198142" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="198212:198842" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="198937:200265" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="200418:201716" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="201806:202324" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="202405:203759" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="203847:204260" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="204343:204692" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="204774:205269" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="205332:205849" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="205923:207582" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="207758:208317" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="208379:208819" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="208879:209448" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="209515:210088" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="210157:210738" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="210811:211166" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="211229:211792" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="211856:212443" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="212519:214238" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="214417:215060" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="215136:215597" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="215669:216472" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="216548:217118" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="217187:217753" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="217820:218440" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="218505:219091" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="219168:219623" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="219692:221565" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="221763:222792" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="222919:224212" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="224297:225281" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="225365:225669" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="225753:226735" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="226818:227144" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="227223:227538" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="227627:228899" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="228970:229560" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="229635:229924" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="229997:230491" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="230554:231128" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="231198:231584" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="231663:232420" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="232488:233153" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="233246:233793" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="233878:234421" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="234504:235645" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="235789:236422" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="236494:236795" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="236857:237288" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="237345:238051" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="238118:238404" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="238474:238775" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="238837:241603" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="241905:242399" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="242458:242857" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="242923:243314" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="243376:243729" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="243801:244105" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="244169:244469" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="244530:244830" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="244891:245325" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="245383:245813" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="245869:246574" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="246640:246987" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="247057:247388" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="247450:247735" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="247804:248131" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="248190:248535" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="248603:248903" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="248964:249777" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="249836:251438" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="251605:252248" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="252318:252778" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="252849:253488" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="253556:253859" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="253934:254396" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="254468:254924" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="254993:255459" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="255533:255901" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="255966:257703" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="257897:258534" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="258604:258930" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="259007:259521" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="259589:260149" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="260210:260710" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="260774:261278" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="261344:261795" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="261859:262312" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="262377:262861" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="262917:263514" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="263603:264095" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="264187:264571" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="264653:265297" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="265369:265728" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="265790:266261" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="266349:267048" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="267123:267624" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="267718:268312" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="268397:271326" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="271630:271936" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="272001:273482" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="273548:275935" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="276000:276510" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="276574:277064" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="277121:277613" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="277671:278066" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="278130:278614" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="278668:279036" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="279102:279586" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="279640:280142" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="280206:280587" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="280645:281145" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="281208:281700" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="281759:282263" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="282328:282838" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="282906:283396" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="283454:284225" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="284329:284843" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="284911:285471" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="285532:286114" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="286186:288203" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="288414:289044" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="289107:289646" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="289723:290365" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="290434:290969" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="291044:292010" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="292076:293337" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="293397:294037" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="294105:294488" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="294560:295059" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="295119:295600" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="295651:296270" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="296327:298169" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="298373:298708" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="298773:299106" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="299170:299610" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="299673:300023" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="300081:300435" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="300495:301063" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="301127:301693" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="301756:302270" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="302340:302912" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="302978:303462" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="303517:306388" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="306670:307167" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="307227:307794" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="307856:308471" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="308528:308984" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="309048:309621" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="309686:310245" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="310303:310862" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="310920:311534" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="311588:312145" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="312202:312771" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="312834:313397" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="313458:314025" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="314088:314651" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="314712:315174" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="315242:315747" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="315812:316258" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="316318:317359" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="317496:318131" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="318200:318714" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="318782:319434" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="319503:320179" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="320247:320839" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="320902:321862" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="321979:322311" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="322376:322737" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="322802:323317" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="323389:323902" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="323973:343008" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="344585:345084" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="345143:345656" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="345722:346227" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="346289:347163" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="347219:347724" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="347786:348281" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="348338:348845" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="348908:349409" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="349469:349978" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="350043:350538" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="350596:351103" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="351167:351668" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="351729:352234" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="352297:352812" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="352880:353570" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="353633:354140" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="354204:354723" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="354793:355306" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="355373:355884" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="355950:356459" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="356524:357035" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="357101:357614" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="357681:358200" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="358270:358791" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="358862:359375" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="359442:359959" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="360028:360525" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="360584:361105" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="361176:361693" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="361762:362275" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="362342:362857" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="362925:363446" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="363517:363892" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="363960:364459" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="364519:365018" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="365078:365541" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="365612:365927" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="365994:366511" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="366580:367089" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="367154:367661" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="367725:368248" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="368320:368841" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="368912:369435" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="369507:370002" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="370060:370549" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="370604:371103" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="371163:371656" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="371713:372220" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="372284:372724" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="372779:373231" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="373292:373752" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="373817:374277" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="374342:374796" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="374858:375300" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="375356:375806" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="375866:376328" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="376394:376971" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="377037:377526" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="377581:378082" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="378143:378640" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="378699:379208" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="379273:379868" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="379943:380446" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="380508:381186" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="381243:381736" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="381793:382294" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="382355:382880" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="382953:383464" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="383530:384037" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="384101:384680" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="384747:385336" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="385408:385997" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="386069:386658" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="386730:387321" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="387394:387891" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="387950:388453" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="388515:389084" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="389146:389641" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="389699:390198" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="390258:390757" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="390817:391312" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="391370:391867" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="391926:392441" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="392509:393044" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="393122:393637" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="393705:394196" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="394252:394741" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="394796:395319" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="395391:395902" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="395968:396489" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="396560:397095" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="397173:397702" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="397777:398300" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="398372:399080" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="399152:399840" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="399902:400425" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="400497:400988" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="401044:401401" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="401460:401831" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="401897:402270" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="402337:403196" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="403263:404122" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="404189:405046" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="405112:405969" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="406035:406888" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="406952:407805" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="407869:408222" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="408280:411948" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="412306:413567" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="413627:414136" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="414198:414610" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="414681:415174" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="415231:415796" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="415856:416423" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="416484:417053" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="417115:417684" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="417746:418311" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="418371:418787" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="418860:419357" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="419417:419906" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="419962:420338" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="420392:420905" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="420973:421343" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="421394:421963" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="422026:422589" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="422649:423216" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="423278:423841" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="423901:424460" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="424518:425025" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="425090:426341" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="426492:427194" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="427298:427734" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="427796:428248" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="428318:428762" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="428828:429128" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="429187:429619" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="429674:430119" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="430175:430962" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="431022:431574" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="431626:432182" ph="/**...*/" />
-            <marker date="1510814052590" expanded="true" signature="432236:432712" ph="/**...*/" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="42" column="4" lean-forward="false" selection-start-line="42" selection-start-column="4" selection-end-line="42" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -3426,17 +3023,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/view/MachineFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="65" column="0" lean-forward="false" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding>
-            <element signature="e#2716#2717#0" expanded="true" />
-            <element signature="e#2768#2769#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_port_select.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="71">
@@ -3448,25 +3034,67 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_machine.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/PortSelect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="37" column="32" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="37" selection-end-column="32" />
-          <folding>
-            <element signature="e#978#997#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="204">
+          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-v7-22.2.1.aar/1929ae68cd4798d0a6820fa224837ca6/jars/classes.jar!/android/support/v7/widget/AppCompatButton.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_axis.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="46" column="48" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="46" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/PortSelect.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/devmel/apps/reprapcontrol/view/MachineFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="223" column="12" lean-forward="false" selection-start-line="223" selection-start-column="12" selection-end-line="223" selection-end-column="12" />
-          <folding />
+        <state relative-caret-position="188">
+          <caret line="55" column="75" lean-forward="false" selection-start-line="55" selection-start-column="62" selection-end-line="55" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_machine.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
+          <folding>
+            <element signature="e#803#822#0" expanded="true" />
+            <element signature="e#1182#1209#0" expanded="true" />
+            <element signature="e#1599#1620#0" expanded="true" />
+            <element signature="e#2258#2280#0" expanded="true" />
+            <element signature="e#2556#2573#0" expanded="true" />
+            <element signature="e#2997#3022#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
   </component>

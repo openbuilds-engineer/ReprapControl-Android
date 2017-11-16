@@ -21,7 +21,6 @@ import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.ToggleButton;
@@ -33,9 +32,6 @@ public class MachineFragment extends Fragment {
 	private Button connectBt;
 	private Button selectPortBt;
 	private EditText baudRateValue;
-	private RadioGroup dataBitsValue;
-	private RadioGroup stopBitsValue;
-	private RadioGroup parityValue;
 	private TextView infosText;
 	private Button swresetBt;
 	private LinearLayout lbLayout;
@@ -58,9 +54,6 @@ public class MachineFragment extends Fragment {
 		connectBt = (Button) rootView.findViewById(R.id.connectBt);
 		selectPortBt = (Button) rootView.findViewById(R.id.selectPortBt);
 		baudRateValue = (EditText) rootView.findViewById(R.id.baudRateValue);
-		dataBitsValue = (RadioGroup) rootView.findViewById(R.id.dataBitsValue);
-		stopBitsValue = (RadioGroup) rootView.findViewById(R.id.stopBitsValue);
-		parityValue = (RadioGroup) rootView.findViewById(R.id.parityValue);
 		infosText = (TextView) rootView.findViewById(R.id.infosText);
 		swresetBt = (Button) rootView.findViewById(R.id.swresetBt);
 
@@ -76,30 +69,6 @@ public class MachineFragment extends Fragment {
 			@Override
 			public void afterTextChanged(Editable s) {
 				sharedData.setBaudRate(getBaudRateView());
-			}
-		});
-
-		dataBitsValue.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-		{
-			@Override
-			public void onCheckedChanged(RadioGroup group, int checkedId) {
-				sharedData.setDataBits(getDataBitsView());
-			}
-		});
-
-		stopBitsValue.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-		{
-			@Override
-			public void onCheckedChanged(RadioGroup group, int checkedId) {
-				sharedData.setStopbits(getStopbitsView());
-			}
-		});
-
-		parityValue.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener()
-		{
-			@Override
-			public void onCheckedChanged(RadioGroup group, int checkedId) {
-				sharedData.setParity(getParityView());
 			}
 		});
 
@@ -153,26 +122,8 @@ public class MachineFragment extends Fragment {
 	private void setConnected(boolean connect){
 		if(connect==true){
 			baudRateValue.setEnabled(false);
-			for (int i = 0; i < dataBitsValue.getChildCount(); i++) {
-				dataBitsValue.getChildAt(i).setEnabled(false);
-			}
-			for (int i = 0; i < stopBitsValue.getChildCount(); i++) {
-				stopBitsValue.getChildAt(i).setEnabled(false);
-			}
-			for (int i = 0; i < parityValue.getChildCount(); i++) {
-				parityValue.getChildAt(i).setEnabled(false);
-			}
 		}else{
 			baudRateValue.setEnabled(true);
-			for (int i = 0; i < dataBitsValue.getChildCount(); i++) {
-				dataBitsValue.getChildAt(i).setEnabled(true);
-			}
-			for (int i = 0; i < stopBitsValue.getChildCount(); i++) {
-				stopBitsValue.getChildAt(i).setEnabled(true);
-			}
-			for (int i = 0; i < parityValue.getChildCount(); i++) {
-				parityValue.getChildAt(i).setEnabled(true);
-			}
 		}
 		if(swresetBt != null)
 			swresetBt.setEnabled(connect);
@@ -195,57 +146,9 @@ public class MachineFragment extends Fragment {
 		try{baudRate = Integer.valueOf(baudRateValue.getText().toString());}catch(Exception e){}
 		return baudRate;
 	}
-	private int getDataBitsView(){
-		int dataBits = sharedData.getDatabits();
-		switch (dataBitsValue.getCheckedRadioButtonId()) {
-		case R.id.dataBits5:
-			dataBits=5;
-			break;
-		case R.id.dataBits6:
-			dataBits=6;
-			break;
-		case R.id.dataBits7:
-			dataBits=7;
-			break;
-		case R.id.dataBits8:
-			dataBits=8;
-			break;
-		}
-		return dataBits;
-	}
-	private int getStopbitsView(){
-		int stopBits = sharedData.getStopbits();
-		switch (stopBitsValue.getCheckedRadioButtonId()) {
-		case R.id.stopBits1:
-			stopBits = 1;
-			break;
-		case R.id.stopBits2:
-			stopBits = 2;
-			break;
-		}
-		return stopBits;
-	}
-	private int getParityView(){
-		int parity = sharedData.getParity();
-		switch (parityValue.getCheckedRadioButtonId()) {
-		case R.id.parityNone:
-			parity=0;
-			break;
-		case R.id.parityOdd:
-			parity=1;
-			break;
-		case R.id.parityEven:
-			parity=2;
-			break;
-		}
-		return parity;
-	}
 
 	private void setParametersView(){
 		this.setBaudRateView(sharedData.getBaudrate());
-		this.setDataBitsView(sharedData.getDatabits());
-		this.setStopbitsView(sharedData.getStopbits());
-		this.setParityView(sharedData.getParity());
 	}
 
 	private void setBaudRateView(int baudrate){
@@ -254,45 +157,6 @@ public class MachineFragment extends Fragment {
 		}
 		if(baudRateValue != null)
 			baudRateValue.setText(""+baudrate);
-	}
-	private void setDataBitsView(int dataBits){
-		int id = R.id.dataBits8;
-		switch (dataBits) {
-			case 5:
-				id=R.id.dataBits5;
-				break;
-			case 6:
-				id=R.id.dataBits6;
-				break;
-			case 7:
-				id=R.id.dataBits7;
-				break;
-		}
-		if(dataBitsValue != null)
-			dataBitsValue.check(id);
-	}
-	private void setStopbitsView(int stopBits){
-		int id = R.id.stopBits1;
-		switch (stopBits) {
-			case 2:
-				id=R.id.stopBits2;
-				break;
-		}
-		if(stopBitsValue != null)
-			stopBitsValue.check(id);
-	}
-	private void setParityView(int parity){
-		int id = R.id.parityNone;
-		switch (parity) {
-		case 1:
-			id=R.id.parityOdd;
-			break;
-		case 2:
-			id=R.id.parityEven;
-			break;
-		}
-		if(parityValue != null)
-			parityValue.check(id);
 	}
 
 	private void testConnectivity(){

@@ -1,3 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
@@ -7,137 +9,65 @@
     android:layout_height="wrap_content"
     android:orientation="vertical" >
 
-    <Button
-        android:id="@+id/selectPortBt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-    <TextView
+    <TableLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:text="@string/machineConfig"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:focusable="true"
-        android:focusableInTouchMode="true"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/baud_rate"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <EditText
-        android:id="@+id/baudRateValue"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="number"
-        android:text="115200" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/databits"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <RadioGroup
-        android:id="@+id/dataBitsValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <RadioButton
-            android:id="@+id/dataBits5"
+        <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5" />
+            android:layout_height="wrap_content">>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:text="@string/baud_rate"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
 
-        <RadioButton
-            android:id="@+id/dataBits6"
+            <EditText
+                android:id="@+id/baudRateValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="number"
+                android:text="@string/default_baud_rate" />
+        </TableRow>
+
+        <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="6" />
-
-        <RadioButton
-            android:id="@+id/dataBits7"
+            android:layout_height="wrap_content">>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:text="@string/select_port"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/selectPortBt" />
+        </TableRow>
+        <TableRow
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="7" />
+            android:layout_height="wrap_content">>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:text="@string/connect_port"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:id="@+id/connectBt"
+                android:text="@string/connect" />
+        </TableRow>
 
-        <RadioButton
-            android:id="@+id/dataBits8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="8" />
-    </RadioGroup>
+    </TableLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/stopbits"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
 
-    <RadioGroup
-        android:id="@+id/stopBitsValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <RadioButton
-            android:id="@+id/stopBits1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1" />
-
-        <RadioButton
-            android:id="@+id/stopBits2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2" />
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/parity"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
-
-    <RadioGroup
-        android:id="@+id/parityValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal" >
-
-        <RadioButton
-            android:id="@+id/parityNone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/none"
-            android:checked="false" />
-
-        <RadioButton
-            android:id="@+id/parityOdd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/odd"
-            android:checked="false" />
-
-        <RadioButton
-            android:id="@+id/parityEven"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/even"
-            android:checked="false" />
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/connectBt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/connect" />
 
     <TextView
         android:id="@+id/infosText"
@@ -151,8 +81,8 @@
         android:layout_height="110dp"
         android:ems="10"
         android:gravity="top"
-        android:text="Terminal"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        android:text="@string/string_terminal"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1" android:inputType="" />
 
     <Button
         android:layout_width="wrap_content"
